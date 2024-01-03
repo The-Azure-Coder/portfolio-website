@@ -16,11 +16,13 @@
     background-color: var(--dark-color);
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
+   
   
   }
 
   html{
     scroll-behavior: smooth;
+   
   }
   ::-webkit-scrollbar {
     width: 10px;
@@ -166,10 +168,6 @@
     background-color: #1e1e1e !important;
 }
 
-.header .logo {
-  /* padding-right: 35rem; */
-}
-
 #menu-icon{
   display: block;
   padding-right: 7rem;
@@ -190,16 +188,11 @@
   transition-delay: 0s;
 
 }
-
 .header .navbar .nav-links .list-items{
 display: block;
 margin: 2rem 0;
 }
 }
-
-
-
-
 
 .intro {
   padding-left: 8rem;
@@ -950,6 +943,7 @@ border-radius: 50%;
 }
 
 .grid-item {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -1036,7 +1030,7 @@ border-radius: 50%;
 
 .grid-item:nth-child(10) .back {
   background-color: #216287;
-  color: #e87912
+  color: #fff
 }
 
 .back {
@@ -1073,24 +1067,7 @@ border-radius: 50%;
   
 }
 
-@media (min-width: 480px) { 
 
-  
-  .grid-container {
-    perspective: 1000px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 40px;
-    padding: 20px;
-  }
-
-  .skill .heading p {
-    width: 30rem;
-    line-height: 30px;
-  }
-  
-}
 
 @media (min-width: 992px) { 
   
@@ -1120,6 +1097,18 @@ border-radius: 50%;
     line-height: 30px;
   }
   
+}
+@media (min-width: 1400px) { 
+
+  
+  .grid-container {
+    perspective: 1000px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px;
+  }
 }
 
 
@@ -1160,6 +1149,7 @@ border-radius: 50%;
 .slide {
   flex: 0 0 100%; /* Each slide takes up 100% of the container initially */
   box-sizing: border-box;
+  cursor: pointer;
   margin-right: 2rem;
   border-radius: 0.5rem;
 }
@@ -1257,7 +1247,8 @@ border-radius: 50%;
 }
 .modal-details .image img{
  width: 600px;
- height: 300px
+ height: 300px;
+ object-fit: cover;
 
   
 }
@@ -1453,9 +1444,20 @@ border-radius: 50%;
 }
 
 
-.contact .contact-container .contact-form .form-group {
+.contact .contact-container .contact-form .section-group {
+  display: flex;
+  gap: 45px;
+}
+
+.contact .contact-container .contact-form{
   width: 30rem;
 }
+
+.contact .contact-container .contact-form .section-group .form-group {
+  width: 100%
+}
+
+
 
 .contact .contact-container .contact-form .form-group .form-label {
   display: block;
@@ -1466,6 +1468,8 @@ border-radius: 50%;
 .contact .contact-container .contact-form .form-group .form-control {
   display: block;
   background-color: #363434;
+  outline: none;
+  color: #ffff;
   border: none;
   padding: 13px;
   width: 100%;
@@ -1474,20 +1478,38 @@ border-radius: 50%;
 }
 
 .contact .contact-container .contact-form .btn-con {
-  width: 31.7rem;
+  width: 31.6rem;
 }
 
 .contact .contact-container .contact-form .contact-btn {
   background-color: #ffa800;
+  position: relative;
   border: none;
   outline: none;
   width: 100%;
   border-radius: 0.3rem;
+  cursor: pointer;
   display: block;
   font-weight: 600;
   padding: 10px;
+  z-index: 1;
+
 }
 
+.contact .contact-container .contact-form .contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transition: .5s;
+}
+.contact .contact-container .contact-form .contact-btn:hover:before {
+  width: 100%;
+}
 
 @media (min-width: 480px) { 
 
@@ -1517,19 +1539,35 @@ border-radius: 50%;
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
+    gap: 40px;
   }
   
   
 }
 @media (min-width: 1400px) { 
 
+  .contact{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
   .contact .contact-container {
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 150px;
+    gap: 400px;
   }
+
+  /* .contact .contact-container .contact-form .form-group {
+    width: 35rem;
+  }
+
+  .contact .contact-container .contact-form .btn-con {
+    width: 36.6rem;
+  }
+  
+   */
   
   
 }

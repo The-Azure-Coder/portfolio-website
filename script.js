@@ -12,6 +12,7 @@ menuIcon.onclick =()=>{
   navbar.classList.toggle('active');
 }
 
+console.log(sections)
 window.onscroll = function() {
 
   sections.forEach(sec=>{
@@ -20,9 +21,9 @@ window.onscroll = function() {
     let height = sec.offsetHeight;
     let id = sec.getAttribute('id')
 
-    if(top>=offset && top < offset + height){
+    if(top>offset && top < offset + height){
       navlinks.forEach(links=>{
-        console.log(links)
+        // console.log(links)
         links.classList.remove('active');
         document.querySelector('header nav ul li a[href*=' + id +']').classList.add('active')
       })
@@ -90,6 +91,39 @@ window.addEventListener('resize', function() {
 
 // Initial slide
 showSlide(currentIndex);
+
+
+
+function submitContactForm(){
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var subject = document.getElementById("subject").value;
+  var message = document.getElementById("message").value;
+
+  // Perform basic validation
+  if (name === "" || email === "" || subject === "" || message === "") {
+      alert("Please fill in all fields");
+      return;
+  }
+
+  // Prepare the email parameters
+  // var emailParams = {
+  //     name: name,
+  //     email: email,
+  //     message: message
+  // };
+//  console.log(emailParams)
+
+ var subject = "Contact Form Submission";
+ var mailtoLink = "mailto:tyresemorgan.dr@gmail.com" + 
+                  "?subject=" + encodeURIComponent(subject) +
+                  "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
+
+ // Open the default email client with the pre-filled email
+ window.location.href = mailtoLink;
+}
+
+
 
 
 
