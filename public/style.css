@@ -200,7 +200,7 @@ margin: 2rem 0;
   padding-top: 13rem;
   padding-bottom: 8.5rem;
   position: relative;
-  background-image: url("./public/assets/images/banner-image.png");
+  background-image: url("assets/images/banner-image.png");
   height: 100%;
   width: 100%;
   background-position: center;
@@ -559,7 +559,7 @@ margin: 2rem 0;
   position: absolute;
   inset: 10px;
   background-color: #1e1e1e;
-  background-image: url("./public/assets/images/profile.png");
+  background-image: url("assets/images/profile.png");
   background-size: cover;
   border-radius: 16px;
 }
