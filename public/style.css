@@ -256,9 +256,10 @@ margin: 2rem 0;
 
 .intro .role-detail {
   font-weight: 500;
-  font-size: 30px;
+  font-size: 16px;
   font-weight: lighter;
-  letter-spacing: 2px;
+  width: 50rem;
+  letter-spacing: 1px;
 }
 
 .intro .social {
@@ -401,7 +402,7 @@ margin: 2rem 0;
  transition: .5s;
 }
 
-@media (min-width: 480px) { 
+@media (min-width: 360px) { 
   .intro {
     padding-left: 3rem;
   
@@ -429,9 +430,9 @@ margin: 2rem 0;
   
   .intro .role-detail {
     font-weight: 500;
-    font-size: 20px;
+     font-size: 16px;
     font-weight: lighter;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
   }
   
   .intro .social {
@@ -482,9 +483,9 @@ margin: 2rem 0;
     
     .intro .role-detail {
       font-weight: 500;
-      font-size: 30px;
+      font-size: 16px;
       font-weight: lighter;
-      letter-spacing: 2px;
+      /* letter-spacing: 2px; */
     }
     
     .intro .social {
@@ -512,8 +513,7 @@ margin: 2rem 0;
 /* ----------------------------------------------------ABOUT ME SECTION------------------------------------------- */
 .about {
   height: 100%;
-  padding-left: 8rem;
-  padding-top: 4rem;
+  padding: 7rem 6rem 0rem 7rem ;
 }
 
 .about .profile-container { display: flex; }
@@ -726,10 +726,10 @@ margin: 2rem 0;
   }
 .about .profile-container .content .feats div p { line-height: 2px; }
 
-@media (min-width: 480px) {
+@media (min-width: 360px) {
 
   .about{
-    padding-left: 0rem;
+    padding: 7rem 0rem 0rem 0rem ;
   }
   .about .profile-container{
     flex-direction: column;
@@ -758,7 +758,7 @@ margin: 2rem 0;
 @media (min-width: 1200px) {
 
   .about{
-    padding-left: 8rem;
+    padding: 7rem 6rem 0rem 7rem ;
   }
   .about .profile-container{
     flex-direction: row;
@@ -793,7 +793,7 @@ margin: 2rem 0;
   align-items: center;
   flex-direction: column;
   /* font-size: 12px; */
-  padding: 8rem;
+  padding: 7rem 6rem 0rem 7rem ;
   height: 100%;
   padding-bottom: 5rem;
 
@@ -892,11 +892,11 @@ border-radius: 50%;
 
   }
 
-  @media (min-width: 480px) { 
+  @media (min-width: 360px) { 
 
     .education{
      
-      padding: 2rem;
+      padding: 7rem 0rem 0rem 0rem ;
     
     }
     
@@ -905,9 +905,7 @@ border-radius: 50%;
   @media (min-width: 1200px) { 
 
     .education{
-     
-      padding: 8rem;
-    
+      padding: 7rem 6rem 0rem 7rem ;
     }
     
   }
@@ -917,7 +915,7 @@ border-radius: 50%;
 
 .skill {
   height: 100%;
-  padding-top: 2rem;
+  padding-top: 7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1048,7 +1046,7 @@ border-radius: 50%;
   padding: 0px;
 }
 
-@media (min-width: 480px) { 
+@media (min-width: 360px) { 
 
   
   .grid-container {
@@ -1116,7 +1114,7 @@ border-radius: 50%;
 
 .works {
   height: 100%;
-  padding-top: 4rem;
+  padding-top: 7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1134,7 +1132,7 @@ border-radius: 50%;
 
 .slider-container {
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   display: flex;
@@ -1183,7 +1181,7 @@ border-radius: 50%;
 
 .next-btn {
   position: relative;
-  right: 5rem;
+  right: -2rem;
   top: 1rem;
   cursor: pointer;
 }
@@ -1295,7 +1293,7 @@ border-radius: 50%;
   to {top: 0; opacity: 1}
 }
 
-@media (min-width: 480px) {
+@media (min-width: 360px) {
   .slide {
       flex: 0 0 100%; /* Each slide takes up 50% of the container on screens wider than 576px */
 
@@ -1383,14 +1381,14 @@ border-radius: 50%;
 
   .prev-btn {
     position: relative;
-    left: 5rem;
+    left: -2rem;
     top: 1rem;
     cursor: pointer;
   }
   
   .next-btn {
     position: relative;
-    right: 5rem;
+    right: -2rem;
     top: 1rem;
     cursor: pointer;
   }
@@ -1400,7 +1398,7 @@ border-radius: 50%;
 .contact {
   height: 100%;
   padding-left: 8rem;
-  margin-top: 8rem;
+  padding-top: 8rem;
   margin-bottom: 4rem;
 }
 
@@ -1511,7 +1509,7 @@ border-radius: 50%;
   width: 100%;
 }
 
-@media (min-width: 480px) { 
+@media (min-width: 360px) { 
 
   .contact{
     padding-left: 0rem;
@@ -1549,7 +1547,7 @@ border-radius: 50%;
   .contact{
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding: 7rem 6rem 0rem 0rem ;
   }
 
   .contact .contact-container {
