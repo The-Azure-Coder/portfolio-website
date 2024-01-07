@@ -836,7 +836,7 @@ border-radius: 50%;
 
   }
 
-  @media (min-width: 360px) { 
+  @media (min-width: 250px) { 
 
     .education{
      
@@ -1004,10 +1004,11 @@ border-radius: 50%;
   padding: 0px;
 }
 
-@media (min-width: 360px) { 
+@media (min-width: 250px) { 
 
-
-  
+  .skill{
+    padding: 7rem 0rem 0rem 0rem;
+  }
   .grid-container {
     perspective: 1000px;
     display: grid;
@@ -1023,7 +1024,7 @@ border-radius: 50%;
 }
 
   .skill .heading p {
-    width: 20rem;
+    width: 100%;
     line-height: 30px;
   }
   
@@ -1094,62 +1095,6 @@ border-radius: 50%;
   line-height: 30px;
 }
 
-.slider-container {
-  position: relative;
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-.slider {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  flex: 0 0 100%; /* Each slide takes up 100% of the container initially */
-  box-sizing: border-box;
-  cursor: pointer;
-  margin-right: 2rem;
-  border-radius: 0.5rem;
-}
-
-.slide img {
-  width: 100%;
-  height: 20rem;
-  border-radius: 0.5rem;
-  display: inline-block;
-}
-
-
-
-.works-slide-con {
-  display: flex;
-  align-items: center;
-}
-
-.prev-btn,
-.next-btn {
-  width: 20px;
-  height: 20px;
-}
-
-.prev-btn {
-  position: relative;
-  left: 5rem;
-  top: 1rem;
-  cursor: pointer;
-}
-
-.next-btn {
-  position: relative;
-  right: -2rem;
-  top: 1rem;
-  cursor: pointer;
-}
-
 /* The Modal (background) */
 
 .modal {  
@@ -1204,8 +1149,8 @@ border-radius: 50%;
   
 }
 .modal-details .image img{
- width: 600px;
- height: 300px;
+ width: 100%;
+ height: 100%;
  object-fit: cover;
 
   
@@ -1248,13 +1193,9 @@ border-radius: 50%;
   to {top: 0; opacity: 1}
 }
 
-@media (min-width: 280px) {
+@media (min-width: 250px) {
   .works{
     padding: 7rem 0rem 0rem 0rem;
-  }
-  .slide {
-      flex: 0 0 100%; /* Each slide takes up 50% of the container on screens wider than 576px */
-
   }
 
   .modal-content{
@@ -1267,103 +1208,41 @@ border-radius: 50%;
     line-height: 30px;
   }
 
-  .prev-btn {
-    position: relative;
-    left: 1rem;
-    top: 1rem;
-    z-index: 3;
-    cursor: pointer;
-  }
-  
-  .next-btn {
-    position: relative;
-    right: 1rem;
-    top: 1rem;
-    z-index: 3;
-    cursor: pointer;
-  }
-}
+  .modal-details .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+     
+   }
 
+ 
+}
 
 @media (min-width: 768px) {
-  .slide {
-      flex: 0 0 50%; /* Each slide takes up 33.33% of the container on screens wider than 992px */
-  }
-  .works .heading p {
-    width: 45rem;
-    line-height: 30px;
-  }
-
-  .prev-btn {
-    position: relative;
-    left: 1rem;
-    top: 1rem;
-    cursor: pointer;
-  }
   
-  .next-btn {
-    position: relative;
-    right: 1rem;
-    top: 1rem;
-    cursor: pointer;
-  }
 }
-
 
 @media (min-width: 992px) {
-  .slide {
-      flex: 0 0 33.33%; /* Each slide takes up 33.33% of the container on screens wider than 992px */
-  }
   .works .heading p {
     width: 45rem;
     line-height: 30px;
   }
 
-  .prev-btn {
-    position: relative;
-    left: 1rem;
-    top: 1rem;
-    cursor: pointer;
-  }
-  
-  .next-btn {
-    position: relative;
-    right: 1rem;
-    top: 1rem;
-    cursor: pointer;
-  }
 }
 
-@media (min-width: 1200px) {
-  .slide {
-      flex: 0 0 33.33%; /* Each slide takes up 33.33% of the container on screens wider than 1200px */
-  }
-
-  .prev-btn {
-    position: relative;
-    left: -2rem;
-    top: 1rem;
-    cursor: pointer;
-  }
-  
-  .next-btn {
-    position: relative;
-    right: -2rem;
-    top: 1rem;
-    cursor: pointer;
-  }
-}
 /* =-----------------------------------------contact starts--------------------------------------------------- */
 
 .contact {
   height: 100%;
-  display: flex;
-  justify-content: center;
+  padding: 0;
+  padding-top: 7rem;
   margin-bottom: 4rem;
 }
 
 .contact .contact-container {
   display: flex;
+  justify-content: center;
 
 }
 .contact .contact-container .contact-details {
@@ -1562,4 +1441,109 @@ width: 100%;
 .footer-iconTop a:hover i {
  
   color: var(--dark-color);
+}
+
+
+swiper-container {
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 250px;
+}
+
+swiper-slide img {
+  display: block;
+  object-fit: cover;
+  width: 400px;
+  height: 250px;  
+}
+
+.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 25px 75px rgba(0,0,0,0.55);
+  border: 1px solid #fac142;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  background: transparent;
+  border: 1px dashed #fac142;
+  border-radius: 50%;
+  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
+  inset 5px 5px 35px rgba(0,0,0,0.25);
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px dashed #fac142;
+  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
+  inset 5px 5px 35px rgba(0,0,0,0.25);
+}
+
+.loader span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top left;
+  animation: radar82 2s linear infinite;
+  border-top: 1px dashed #fff;
+}
+
+.loader span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fac142;
+  transform-origin: top left;
+  transform: rotate(-55deg);
+  filter: blur(30px) drop-shadow(20px 20px 20px #fac142);
+}
+
+@keyframes radar82 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-color);
+  z-index: 9999;
 }

@@ -15,6 +15,11 @@
 
 <body>
     <div class="doc-conatiner">
+        <div class="loader-wrapper">
+        <div class="loader">
+            <span></span>
+          </div>
+          </div>
         <!-- <div class="doc-shape">
         <img src="../public/assets/images/doc-shape.svg" alt="">
     </div> -->
@@ -400,11 +405,11 @@
             </div>
 
             <div class="works-slide-con">
-                <div>
+                <!-- <div>
                     <img class="prev-btn" onclick="changeSlide(-1)" src="assets/images/left-arrow.svg" alt="">
 
-                </div>
-                <div class="slider-container">
+                </div> -->
+                <!-- <div class="slider-container">
                     <div class="slider">
                         <div class="slide">
                             <img class="open-btn" data-modal-id="beauty" src="assets/images/slide1.png" alt="Image 1">
@@ -416,11 +421,26 @@
                             <img class="open-btn" data-modal-id="clinic" src="assets/images/slide3.png" alt="Image 3">
                         </div>
                     </div>
-                </div>
-                <div>
+                </div> -->
+
+                <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+                slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+                coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+                <swiper-slide>
+                  <img class="open-btn" data-modal-id="clinic" src="assets/images/clinic.png" />
+                </swiper-slide>
+                <swiper-slide>
+                  <img class="open-btn" data-modal-id="beauty" src="assets/images/morgana_beauty.png" />
+                </swiper-slide>
+                <swiper-slide>
+                  <img class="open-btn" data-modal-id="books" src="assets/images/books.png" />
+                </swiper-slide>
+               
+              </swiper-container>
+                <!-- <div>
                     <img class="next-btn" onclick="changeSlide(1)" src="assets/images/right-arrow.svg" alt="">
 
-                </div>
+                </div> -->
             </div>
 
         </section>
@@ -583,7 +603,7 @@
                   <a class="modal-btn" href="#">Source Code</a>
             </div>
         </div> -->
-
+        <script src="../node_modules/swiper/swiper-element-bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 
