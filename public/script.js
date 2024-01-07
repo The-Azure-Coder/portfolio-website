@@ -93,17 +93,16 @@ window.onscroll = function() {
 // showSlide(currentIndex);
 
 
-// window.addEventListener("load", function() {
-//   var loaderWrapper = document.querySelector(".loader-wrapper");
-//   loaderWrapper.style.display = "none";
-// });
- // Add JavaScript to hide the loader after a delay
- document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(function() {
-      var loaderWrapper = document.querySelector(".loader-wrapper");
-      loaderWrapper.style.display = "none";
-  }, 3000); // Adjust the delay in milliseconds (e.g., 3000 for 3 seconds)
+window.addEventListener("load", function() {
+  var loaderWrapper = document.querySelector(".loader-wrapper");
+  loaderWrapper.style.display = "none";
 });
+//  document.addEventListener("DOMContentLoaded", function() {
+//   setTimeout(function() {
+//       var loaderWrapper = document.querySelector(".loader-wrapper");
+//       loaderWrapper.style.display = "none";
+//   }, 3000); 
+// });
 function submitContactForm(){
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
