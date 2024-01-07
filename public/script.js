@@ -49,51 +49,61 @@ window.onscroll = function() {
 
   let currentIndex = 0;
 
-function showSlide(index) {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const slidesToShow = getSlidesToShow(); // Dynamically determine the number of slides to show
+// function showSlide(index) {
+//     const slider = document.querySelector('.slider');
+//     const slides = document.querySelectorAll('.slide');
+//     const slidesToShow = getSlidesToShow(); // Dynamically determine the number of slides to show
     
-    if (index < 0) {
-        index = slides.length - slidesToShow;
-    } else if (index >= slides.length - slidesToShow + 1) {
-        index = 0;
-    }
+//     if (index < 0) {
+//         index = slides.length - slidesToShow;
+//     } else if (index >= slides.length - slidesToShow + 1) {
+//         index = 0;
+//     }
 
-    currentIndex = index;
+//     currentIndex = index;
 
-    const translateValue = -index * (100 / slidesToShow) + '%';
-    slider.style.transform = 'translateX(' + translateValue + ')';
-}
+//     const translateValue = -index * (100 / slidesToShow) + '%';
+//     slider.style.transform = 'translateX(' + translateValue + ')';
+// }
 
-function changeSlide(direction) {
-    showSlide(currentIndex + direction);
-}
+// function changeSlide(direction) {
+//     showSlide(currentIndex + direction);
+// }
 
-function getSlidesToShow() {
-    const screenWidth = window.innerWidth;
+// function getSlidesToShow() {
+//     const screenWidth = window.innerWidth;
 
-    if (screenWidth >= 1200) {
-        return 3;
-    } else if (screenWidth >= 992) {
-        return 2;
-    }  else if (screenWidth >= 768) {
-      return 2;
-  } else {
-        return 1;
-    }
-}
+//     if (screenWidth >= 1200) {
+//         return 3;
+//     } else if (screenWidth >= 992) {
+//         return 2;
+//     }  else if (screenWidth >= 768) {
+//       return 2;
+//   } else {
+//         return 1;
+//     }
+// }
 
-// Update the number of slides to show on window resize
-window.addEventListener('resize', function() {
-    showSlide(currentIndex);
+
+// window.addEventListener('resize', function() {
+//     showSlide(currentIndex);
+// });
+
+
+// showSlide(currentIndex);
+
+
+// window.addEventListener("load", function() {
+//   var loaderWrapper = document.querySelector(".loader-wrapper");
+//   loaderWrapper.style.display = "none";
+// });
+ // Add JavaScript to hide the loader after a delay
+ document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function() {
+      var loaderWrapper = document.querySelector(".loader-wrapper");
+      loaderWrapper.style.display = "none";
+  }, 3000); // Adjust the delay in milliseconds (e.g., 3000 for 3 seconds)
 });
-
-// Initial slide
-showSlide(currentIndex);
-
-
-
 function submitContactForm(){
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
