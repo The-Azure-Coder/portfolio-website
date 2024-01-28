@@ -151,6 +151,8 @@ function submitContactForm(){
 
 
 
+
+
 // Get all buttons that open modals
 var openButtons = document.querySelectorAll('.open-btn');
 
