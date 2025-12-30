@@ -53,7 +53,7 @@ body {
   content: "";
   position: absolute;
   top: 55px;
-  left: 44%;
+  left: 40%;
   transform: translateX(-50%);
   width: 25px;
   height: 25px;
@@ -71,8 +71,18 @@ body {
   /* display: flex;
   overflow: hidden; */
   height: 100%;
-   clip-path: polygon(0% 0%, 20% 0%, 25% 2%, 45% 2%, 50% 0%, 100% 0%, 100% 100%, 0% 100%);
-    will-change: transform;
+  clip-path: polygon(
+  0% 0%,
+  16% 0%,
+  21% 2%,
+  41% 2%,
+  46% 0%,
+  100% 0%,
+  100% 100%,
+  0% 100%
+);
+
+
 }
 
 
